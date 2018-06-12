@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- JC Chu @ 2018-05-23 -->
 <plist version="1.0">
 <dict>
+  <key>name</key>
+  <string>Modula-3</string>
   <key>fileTypes</key>
   <array>
     <string>m3</string>
@@ -9,27 +12,37 @@
     <string>i3</string>
     <string>ig</string>
   </array>
-  <key>name</key>
-  <string>Modula-3</string>
   <key>patterns</key>
   <array>
     <dict>
       <key>name</key>
       <string>keyword.modula-3</string>
       <key>match</key>
-      <string>\b(?:(AND|ANY|ARRAY|AS|BEGIN|BITS|BRANDED|BY|CASE|CONST|DIV|DO|ELSE|ELSIF|END|EVAL|EXCEPT|EXCEPTION|EXIT|EXPORTS|FINALLY|FOR|FROM|GENERIC|IF|IMPORT|IN|INTERFACE|LOCK|LOOP|METHODS|MOD|MODULE|NOT|OBJECT|OF|OR|OVERRIDES|PROCEDURE|RAISE|RAISES|READONLY|RECORD|REF|REPEAT|RETURN|REVEAL|ROOT|SET|THEN|TO|TRY|TYPE|TYPECASE|UNSAFE|UNTIL|UNTRACED|VALUE|VAR|WHILE|WITH))\b</string>
+      <string>\b(ANY|ARRAY|AS|BEGIN|BITS|BRANDED|BY|CASE|CONST|DO|ELSE|ELSIF|END|EVAL|EXCEPT|EXCEPTION|EXIT|EXPORTS|FINALLY|FOR|FROM|GENERIC|IF|IMPORT|INTERFACE|LOCK|LOOP|METHODS|MODULE|OBJECT|OF|OVERRIDES|PROCEDURE|RAISE|RAISES|READONLY|RECORD|REF|REPEAT|RETURN|REVEAL|ROOT|SET|THEN|TO|TRY|TYPE|TYPECASE|UNSAFE|UNTIL|UNTRACED|VALUE|VAR|WHILE|WITH)\b</string>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>keyword.operator.modula-3</string>
+      <key>match</key>
+      <string>\b(AND|DIV|IN|MOD|NOT|OR)\b</string>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>constant.language.modula-3</string>
+      <key>match</key>
+      <string>\b(FALSE|NIL|ROOT|TRUE)\b</string>
     </dict>
     <dict>
       <key>name</key>
       <string>constant.numeric.float.modula-3</string>
       <key>match</key>
-      <string>[\+\-]?[0-9]+\.[0-9]+([DdEeXx][\+\-][0-9]+)?</string>
+      <string>(\b|[\+\-])[0-9]+\.[0-9]+([DdEeXx][\+\-]?[0-9]+)?\b</string>
     </dict>
     <dict>
       <key>name</key>
       <string>constant.numeric.integer.modula-3</string>
       <key>match</key>
-      <string>[\+\-]?[0-9]+(\_[0-9a-fA-F]+)?L?</string>
+      <string>(\b|[\+\-])[0-9]+(\_[0-9a-fA-F]+)?L?\b</string>
     </dict>
     <dict>
       <key>name</key>
@@ -60,7 +73,7 @@
           <key>name</key>
           <string>constant.character.escape.modula-3</string>
           <key>match</key>
-          <string>(?:\\[0-7]{3}|\\[\\fnrt\"\'])</string>
+          <string>\\[0-7]{3}|\\[\\fnrt\"\']</string>
         </dict>
       </array>
     </dict>
@@ -75,9 +88,9 @@
       <array>
         <dict>
           <key>name</key>
-          <string>constant.character.modula-3</string>
+          <string>constant.character.escape.modula-3</string>
           <key>match</key>
-          <string>\w|(?:\\[0-7]{3}|\\[\\fnrt\"\'])</string>
+          <string>\\[0-7]{3}|\\[\\fnrt\"\']</string>
         </dict>
       </array>
     </dict>
