@@ -45,22 +45,6 @@
     </dict>
     <dict>
       <key>name</key>
-      <string>comment.block.modula-3</string>
-      <key>begin</key>
-      <string>\(\*</string>
-      <key>end</key>
-      <string>\*\)</string>
-    </dict>
-    <dict>
-      <key>name</key>
-      <string>keyword.control.directive.pragma.modula-3</string>
-      <key>begin</key>
-      <string>\&lt;\*</string>
-      <key>end</key>
-      <string>\*\&gt;</string>
-    </dict>
-    <dict>
-      <key>name</key>
       <string>string.quoted.double.modula-3</string>
       <key>begin</key>
       <string>"</string>
@@ -71,8 +55,8 @@
         <dict>
           <key>name</key>
           <string>constant.character.escape.modula-3</string>
-          <key>match</key>
-          <string>\\[0-7]{3}|\\[\\fnrt\"\']</string>
+          <key>include</key>
+          <string>#string_body</string>
         </dict>
       </array>
     </dict>
@@ -88,12 +72,60 @@
         <dict>
           <key>name</key>
           <string>constant.character.escape.modula-3</string>
-          <key>match</key>
-          <string>\\[0-7]{3}|\\[\\fnrt\"\']</string>
+          <key>include</key>
+          <string>#string_body</string>
         </dict>
       </array>
     </dict>
+    <dict>
+      <key>include</key>
+      <string>#comment</string>
+    </dict>
+    <dict>
+      <key>include</key>
+      <string>#pragma</string>
+    </dict>
   </array>
+  <key>repository</key>
+  <dict>
+    <key>string_body</key>
+    <dict>
+      <key>match</key>
+      <string>\\[0-7]{3}|\\[\\fnrt\"\']</string>
+    </dict>
+    <key>comment</key>
+    <dict>
+      <key>name</key>
+      <string>comment.block.modula-3</string>
+      <key>begin</key>
+      <string>\(\*</string>
+      <key>end</key>
+      <string>\*\)</string>
+      <key>patterns</key>
+      <array>
+        <dict>
+          <key>include</key>
+          <string>#comment</string>
+        </dict>
+      </array>
+    </dict>
+    <key>pragma</key>
+    <dict>
+      <key>name</key>
+      <string>keyword.control.directive.pragma.modula-3</string>
+      <key>begin</key>
+      <string>\&lt;\*</string>
+      <key>end</key>
+      <string>\*\&gt;</string>
+      <key>patterns</key>
+      <array>
+        <dict>
+          <key>include</key>
+          <string>#pragma</string>
+        </dict>
+      </array>
+    </dict>
+  </dict>
   <key>scopeName</key>
   <string>source.modula-3</string>
   <key>uuid</key>
