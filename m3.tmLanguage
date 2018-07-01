@@ -53,8 +53,6 @@
       <key>patterns</key>
       <array>
         <dict>
-          <key>name</key>
-          <string>constant.character.escape.modula-3</string>
           <key>include</key>
           <string>#string_body</string>
         </dict>
@@ -70,8 +68,6 @@
       <key>patterns</key>
       <array>
         <dict>
-          <key>name</key>
-          <string>constant.character.escape.modula-3</string>
           <key>include</key>
           <string>#string_body</string>
         </dict>
