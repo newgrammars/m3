@@ -74,6 +74,21 @@
       </array>
     </dict>
     <dict>
+      <key>name</key>
+      <string>keyword.control.assert.cm3_specific.modula-3</string>
+      <key>begin</key>
+      <string>&lt;\*\s*ASSERT\b</string>
+      <key>end</key>
+      <string>\*&gt;</string>
+      <key>patterns</key>
+      <array>
+        <dict>
+          <key>include</key>
+          <string>#pragma</string>
+        </dict>
+      </array>
+    </dict>
+    <dict>
       <key>include</key>
       <string>#comment</string>
     </dict>
