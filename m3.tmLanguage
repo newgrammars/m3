@@ -35,13 +35,13 @@
       <key>name</key>
       <string>constant.numeric.float.modula-3</string>
       <key>match</key>
-      <string>(\b|[\+\-])[0-9]+\.[0-9]+([DdEeXx][\+\-]?[0-9]+)?\b</string>
+      <string>\b[0-9]+\.[0-9]+([DdEeXx][\+\-]?[0-9]+)?\b</string>
     </dict>
     <dict>
       <key>name</key>
       <string>constant.numeric.integer.modula-3</string>
       <key>match</key>
-      <string>(\b|[\+\-])[0-9]+(\_[0-9a-fA-F]+)?L?\b</string>
+      <string>\b[0-9]+(\_[0-9a-fA-F]+)?L?\b</string>
     </dict>
     <dict>
       <key>name</key>
